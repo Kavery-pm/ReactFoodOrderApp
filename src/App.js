@@ -1,9 +1,11 @@
+import React from "react";
+import Header from "./components/Layout/header";
+
+
 function App() {
-  return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
-  );
+  return <React.Fragment>
+    <Header></Header>
+  </React.Fragment>
 }
 
 export default App;
