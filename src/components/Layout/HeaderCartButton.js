@@ -1,9 +1,11 @@
+import CartIcon from "../Cart/CartIcon"
+import classes from './HeaderCart.module.css';
 const HeaderCartButton = props =>{
-return <button>
-    <span><i></i></span>
-    <span></span>
-    <span>
-
+return <button className={classes.button}>
+    <span><CartIcon></CartIcon></span>
+    <span>Your cart</span>
+    <span className={classes.badge}>
+     3
     </span>
 </button>
 }
