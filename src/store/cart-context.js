@@ -1,6 +1,7 @@
-import { useContext } from "react";
+import React from "react";
 
-const CartContext = useContext({
+
+const CartContext = React.createContext({
 items: [],
 totalAmount: 0,
 addItem: ()=>{},
