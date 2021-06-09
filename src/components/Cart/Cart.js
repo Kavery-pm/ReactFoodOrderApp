@@ -6,14 +6,16 @@ import CartItem from "./CartItem";
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
-  console.log(cartCtx);
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
-  console.log(cartCtx.totalAmount);
+  console.log(cartCtx);
   const hasItems = cartCtx.items.length > 0;
+  const addItemHandler = item =>{
+      cartCtx.addItem(item);
+  }
   const cartItems = (
     <ul className={classes["cart-items"]}>
       {cartCtx.items.map((item) => (
-       <CartItem key={item.id} name={item.name} price={item.price} amount={item.amount} summary={item.summary}></CartItem>
+       <CartItem key={item.id} name={item.name} price={item.price} amount={item.amount} summary={item.summary} onAdd={addItemHandler}></CartItem>
       ))}
     </ul>
   );
