@@ -46,7 +46,7 @@ const Cart = (props) => {
   const submitOrderHandler = async (userData) => {
     //skipped error handling
     setIsSubmitting(true);
-    await fetch("https://react-food-order-fcb5a-default-rtdb.asia-southeast1.firebasedatabase.app/orders.json", {
+    await fetch("https://foodorder-dcfa5-default-rtdb.firebaseio.com/orders", {
       method: "POST",
       body: JSON.stringify({
         user: userData,
